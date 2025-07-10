@@ -38,7 +38,7 @@ namespace BotsChargeWhenIdle
         }
     }
 
-    [HarmonyPatch(typeof(Building_MechCharger), nameof(Building_MechCharger.Tick), null)]
+    [HarmonyPatch(typeof(Building_MechCharger), "Tick", null)]
     public static class Building_MechCharger_Patch
     {
         public static void Postfix(Building_MechCharger __instance, ref Pawn ___currentlyChargingMech)
